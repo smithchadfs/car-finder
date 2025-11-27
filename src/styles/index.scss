@@ -1,4 +1,111 @@
-html {
-  background: gray;
+// Import Google Font
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+// Variables from style guide
+$primary-white: #FFFFFF;
+$subtext-gray: #D3D3D3;
+$form-panel-bg: #F2F2F2;
+$form-blue: #3498BC;
+$form-disabled: #909090;
+$selected-option: #212121;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
   background-image: url("/src/images/car-finder-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  
+  // Dark overlay
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.car-finder {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.hero-section {
+  text-align: center;
+  color: $primary-white;
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: $subtext-gray;
+  }
+}
+
+.search-card {
+  background: $form-panel-bg;
+  border-radius: 8px;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1100px;
+}
+
+.search-group {
+  label {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: $form-disabled;
+    
+    &.active {
+      color: $form-blue;
+    }
+  }
+  
+  select {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+    
+    option {
+      background: white;
+      
+      &:checked {
+        background: $form-blue;
+        color: white;
+      }
+    }
+  }
 }

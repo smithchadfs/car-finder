@@ -4,12 +4,14 @@ import './styles/index.scss';
 // Import car data
 import carData from './car-dataset.json';
 
+
 // App logic
 class CarFinder {
     constructor(data) {
         this.cars = data;
     }
 
+    
     // Method to filter cars by year, make, model
     findCars(year, make, model) {
         return this.cars.filter(car => {
@@ -18,4 +20,16 @@ class CarFinder {
             car.model === model;
         });
     }
+
+
+    // Method to display results
+    displayResults(results) {
+
+    }
+
 }
+
+// Initialize when page loads
+(()=>{
+
+})()
