@@ -6,36 +6,34 @@
   <title>Week 1 Assignment: Car Finder App</title>
 </head>
 <body>
-  <main class="car-finder">
-    <div class="hero-section">
-      <h1>Find Your Dream Vehicle</h1>
-      <p>Have you been dreaming about getting a new vehicle?<br>Well, you're inluck.</p>
-
-      <div class="search-card">
-        <div class="search-group">
-          <label>Year</label>
-          <select id="year-select">
-            <option>Vehicle year</option>
-            <!-- Populate with JS -->
-          </select>
-        </div>
-
-        <div class="search-group">
-          <label>Make</label>
-          <select id="make-select">
-            <option>Vehicle make</option>
-          </select>
-        </div>
-
-        <div class="search-group">
-          <label>Model</label>
-          <select id="model-select">
-            <option>Vehicle Model</option>
-          </select>
-        </div>
-        
-      </div>
+  <main>
+    <div class="hero">
+  <h1>Car Finder</h1>
+  <p>Looking for your dream vehicle? Use the form below...</p>
+  
+  <div class="card">
+    <div class="dropdown-group">
+      <label>Year</label>
+      <select id="year">
+        <option>Year</option>
+      </select>
     </div>
+    
+    <div class="dropdown-group">
+      <label>Make</label>
+      <select id="make" disabled>
+        <option>Make</option>
+      </select>
+    </div>
+    
+    <div class="dropdown-group">
+      <label>Model</label>
+      <select id="model" disabled>
+        <option>Model</option>
+      </select>
+    </div>
+  </div>
+</div>
   </main>
   <script src="bundle.js"></script>
 </body>
